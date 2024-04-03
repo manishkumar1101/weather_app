@@ -4,7 +4,6 @@ print("********************** WELCOME TO WEATHER APP **********************")
 print(" ")
 input_city = input("Enter the city name: ")
 url = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q={input_city}&appid={apikey}')
-# print(url.status_code)
 data = url.json()
 if(data['cod']=='404'):
     print("city not found")
